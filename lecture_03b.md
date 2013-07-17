@@ -1,6 +1,8 @@
 # SICP Lecture 3B
 # Symbolic Differentiation; Quotation
 
+**Gerald Jay Sussman**
+
 ## Calculating Derivativees
 
 Reduction rules are appropriate for recursion.
