@@ -29,7 +29,7 @@ Substitution rule:
 
 (if <predicate> <consequent> <alternative>)
 
-> "one of the thing every sorcere will tell you: if you have the name of the spirit you have the power over it"
+> "one of the thing every sorcerer will tell you: if you have the name of the spirit you have the power over it"
 
 iteration:
 
