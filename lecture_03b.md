@@ -1,7 +1,7 @@
 # SICP Lecture 3B
 # Symbolic Differentiation; Quotation
 
-**Gerald Jay Sussman**
+*Gerald Jay Sussman*
 
 ## Calculating Derivativees
 
