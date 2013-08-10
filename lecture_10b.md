@@ -83,7 +83,7 @@ Freelist allocation scheme: all free cells are linked to the next free cell.
 
 Implementing `cons` using the freelist method of allocation:
 
-    (assign a (const (fetch b) (fetch c)))
+    (assign a (cons (fetch b) (fetch c)))
     ====>
     (assign a (fetch free))                                       ;; head of freelist
     (assign free (vector-ref (fetch the-cdrs) (fetch free)))      ;; freelist = (cdr freelist)
@@ -94,7 +94,7 @@ Missing from the code above: assigning the type of value before storing the valu
 
 ## Garbage Collection
 
-The interpretation of programs produces garbages (e.g. short lived frames during procedure evaluation), users produce garbage too:
+The interpretation of programs produces garbage (e.g. short lived frames during procedure evaluation), users produce garbage too:
 
     ;; reverse a list
     (define (rev-loop x y)
