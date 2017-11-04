@@ -19,7 +19,7 @@
           ;; 'foo == (quote foo) -> foo
           ((eq? (car exp) 'quote) (cadr exp))
           ;; (lambda x) (+ x y) -> (closure ((x) (+ x y)) env)  bound variables + body + env
-          ((eq? (car exp) 'lambda) (list 'close (cdr exp) env))
+          ((eq? (car exp) 'lambda) (list 'closure (cdr exp) env))
           ;; (cond (p1 e1) (p2 e2) ...) ->
           ((eq? (car exp) 'cond) (evcond (cdr exp) env))
           ;; (+ x 3) -> default, general application
