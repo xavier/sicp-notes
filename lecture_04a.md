@@ -51,7 +51,7 @@ Pattern match:
 Skeletons:
 
     foo       -> instantiates to itself
-    (foo a b) -> instantiates to a list of 3 elements which is the result of instanciating each
+    (foo a b) -> instantiates to a list of 3 elements which is the result of instantiating each
                  of f, a and b
     (: x)     -> instantiates to the value of x as in the matched pattern
 
@@ -84,9 +84,9 @@ Other example of rules for simplification of algebraic expression:
 Each rule is a pair with a pattern and a skeleton
 
 1. The patterns from the rules are fed into a matcher.
-2. The matched passes a dictionary (x was matched against a given sub expression) to the instanciator
-3. The instanciator receives the skeletons from the rules.
-4. The new expressions produced by the instanciator are fed back into the matcher.
+2. The matched passes a dictionary (x was matched against a given sub expression) to the instantiator
+3. The instantiator receives the skeletons from the rules.
+4. The new expressions produced by the instantiator are fed back into the matcher.
 
 The while process is recursive, until nothing changes.
 
@@ -133,7 +133,7 @@ Example of expression matching:
       (extend-dict pat exp dict))
 
 
-instanciator(dict, skel) -> expr
+instantiator(dict, skel) -> expr
 
     ; recursive tree walk of the skeleton
     (define (instantiate skel dict)
